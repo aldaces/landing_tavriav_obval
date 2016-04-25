@@ -1,0 +1,230 @@
+@import "bourbon"
+@import "vars.sass"
+
+//Load Libs SASS
+@import "app/libs/animate/animate.sass"
+@import "app/libs/timerjs/timeTo.sass"
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+//Custom Styles Here
+.main_text
+	background-color: $main-color
+	text-align: center
+	.border_top
+		position: relative
+		margin-top: -10px
+		background-image: url(../img/dotted.png)
+		background-repeat: repeat-x
+		z-index: 200
+		height: 20px
+	h2
+		font-family: OpenSansRegular, sans-serif
+		font-size: em(33px)
+		line-height: 26px
+		position: relative
+		margin: 0
+		padding: 65px 0 25px
+		&:after
+			content: ""
+			width: 50%
+			border-bottom: 1px solid #fff
+			position: absolute
+			left: 25%
+			bottom: -10%
+	p
+		font-family: PTSans, sans-serif
+		font-size: em(20px)
+		line-height: 26px
+		width: 70%
+		height: 50px
+		margin: 40px auto
+		font-weight: bold
+	h3
+		font-family: OpenSansRegular, sans-serif
+		font-size: em(24px)
+		color: #004c5e
+		font-weight: 600
+		line-height: 26px
+		transform: scaleY(1.0005)
+	.clock
+		padding-bottom: 150px
+
+.border_bottom
+	position: relative
+	background-image: url(../img/dotted.png)
+	background-repeat: repeat-x
+	z-index: 209
+	height: 20px
+	@include transform(scale(1, -1))
+	margin-top: -20px
+
+.goods
+	position: relative
+	margin-top: -10px
+	border-top: 3px dotted #fff
+	.container
+		padding-bottom: 50px
+	h2
+		color: black
+		font-size: em(49px)
+		text-align: center
+		font-family: ComfortaBold, sans-serif
+		margin-top: 0
+		padding-top: 30px
+	.product
+		width: 280px
+		height: 430px
+		border: 2px solid #fff
+		border-radius: 20px
+		margin: 0 auto
+		text-align: center
+		cursor: pointer
+		&:hover
+				box-shadow: 1px 3px 29px 0px #aaa
+				@include transition(all 0.3s ease-in-out);
+		.product_img
+			height: 240px
+			border-radius: 50%
+			border: 8px solid #E0F0F1
+			margin: 12px 12px 5px
+			overflow: hidden
+			img
+				height: 100%
+				width: 100%
+		.price
+			color: red
+			line-height: 34px
+			font-family: RobotoRegular, sans-serif
+			margin: 0 10px
+		.low
+			font-size: em(26px)
+			text-decoration: line-through
+			text-align: left
+			margin: 0
+		.hight
+			font-size: em(34px)
+			font-weight: bold
+			margin: 0 5px 0 25px
+		.product_text
+			color: black
+			font-size: em(21px)
+			line-height: 18px
+			margin: 0
+			padding: 15px
+		.buy_button
+			width: 60%
+			background-color: #ffc000
+			border: 2px solid #fff
+			border-radius: 20px
+			margin: 0 auto
+			&:hover
+				// box-shadow: 2px 3px 29px 0px #aaa
+				border: 2px solid red
+				@include transition(all 0.3s ease-in-out);
+			a
+				display: block
+				text-align: center
+				width: 100%
+				color: #804e00
+				font-size: em(22px)
+				font-weight: bold
+				line-height: 34px
+				text-transform: lowercase
+				margin-top: 0
+				background-image: url(../img/cart.png)
+				background-repeat: no-repeat
+				background-position: 15px
+				margin: 0 10px 3px
+				&:hover
+					text-decoration: none
+					color: #fff
+					background-image: url(../img/cart_hover.png)
+					background-repeat: no-repeat
+					background-position: 15px
+					@include transition(all 0.3s ease-in-out);
+.bg_color_1
+	background-color: #c9e7e8
+.bg_color_2
+	background-color: #d9e2bd
+.bg_color_3
+	background-color: $main-color
+
+.footer
+	text-align: center
+	text-transform: uppercase
+	font-family: PTSans, sans-serif
+	p
+		font-size: em(43px)
+		font-weight: bold
+		line-height: 64px
+	span
+		font-weight: normal
+	.detail
+		a
+			text-decoration: none
+			color: #544743
+			font-size: em(24px)
+			font-family: RobotoRegular, sans-serif
+			font-weight: bold
+			background: #d9e2bd
+			padding: 18px 20px
+			border-radius: 27px
+			margin: 20px auto
+			&:hover
+				text-decoration: underline
+.social
+	background-color: red
+	text-align: center
+	padding: 80px 0 40px
+	.copy
+		color: #fff
+		font-size: em(14px)
+		font-family: RobotoRegular, sans-serif
+	.social_links
+		margin: 40px 0
+		a
+			display: inline-block
+			cursor: pointer
+			background: #fff
+			border-radius: 50%
+			background-image: url(../img/social.png)
+			width: 40px
+			height: 40px
+			background-repeat: no-repeat
+			margin: 0 3px
+			border: 2px solid #fff
+		.vk
+			background-position: 10px 5px
+		.f
+			background-position: -27px 5px
+		.t
+			background-position: -65px 5px
+		.g
+			background-position: -101px 5px
+		.u
+			background-position: -140px 5px
+
+//ALWAYS END
+@import "media"
