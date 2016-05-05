@@ -38,9 +38,9 @@ $(function() {
     $("img, a").on("dragstart", function(event) { event.preventDefault(); });
 
 });
-
+//Timer
 $('.clock').timeTo({
-    timeTo: new Date(new Date('Wed May 4 2016 09:00:00 GMT+0300 (Ð¤Ð¸Ð½Ð»ÑÐ½Ð´Ð¸Ñ (Ð»ÐµÑÐ¾))')),
+    timeTo: new Date(new Date('Wed May 25 2016 09:00:00 GMT+0300 (Ð¤Ð¸Ð½Ð»ÑÐ½Ð´Ð¸Ñ (Ð»ÐµÑÐ¾))')),
     displayDays: 2,
     displayCaptions: true,
     fontSize: 54,
@@ -67,7 +67,7 @@ $(window).on('mousemove', function(e) {
         });
     });
 });
-
+//smooth scroll to hash
 $(document).ready(function() {
  
 $('a[href^="#"]').click(function(){
@@ -78,3 +78,20 @@ $('a[href^="#"]').click(function(){
 });
     
 });
+//animation
+$(document).ready(function() {
+        $(window).scroll(function() {
+            $('.sect_1').each(function() {
+                var imagePos = $(this).offset().top;
+                var imagePosHeight = imagePos + $(this).height();
+                var topOfWindow = $(window).scrollTop();
+                if (imagePos > topOfWindow + $(this).height())
+                    $(this).removeClass("");
+                if (imagePos < topOfWindow + $(window).height() / 1) {
+                    $(this).addClass("animated fadeInUp");
+                }
+                if (imagePosHeight < topOfWindow)
+                    $(this).removeClass("")
+            });
+        });
+    });
