@@ -14,6 +14,8 @@
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1264px)
 	/**/
+	.navbar a
+		padding: 5px 20px
 	.main_title
 		z-index: 99999999
 	.header_banner 
@@ -30,6 +32,8 @@
 	.navbar ul
 		position: relative
 		z-index: 21
+		li
+			font-size: em(16px)
 	.main_title img
 		max-width: 100%
 	.header_banner 
@@ -51,10 +55,14 @@
 	.social
    		img
    			max-width: 70%
-
+	.navbar a
+		padding: 5px 5px
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
+	.navbar li
+		margin: 5px
+		font-size: em(13px)
 	.clouds
 		display: none
 	/*Disable Animation on Mobile Devices*/
